@@ -19,21 +19,23 @@
     --transparent-white: rgba(255, 255, 255, 0.9);
     --padding-general: 15px;
     --padding-table: 5px;
+    --duration-c-text-scroll: 2.2s;
+    --animation-delay-c-text-scroll: 1.5s;
 }
 
 body {
-    background-color: var(--color-white);
+    background-color: var(--color-beige);
 }
 
 .c-text-container {
     position: absolute;
-    top: 0vh;
-    left: 100vw;
+    top: 0;
+    left: -57vw;
     width: 100vw;
     height: 100vh;
     z-index: 10;
     animation-name: text-movement;
-    animation-duration: 4s;
+    animation-duration: var(--duration-c-text-scroll);
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -42,49 +44,49 @@ body {
     animation-delay: 0s;
 }
 .c-text-container:nth-of-type(11n+2) {
-    animation-delay: 3s;
+    animation-delay: var(--animation-delay-c-text-scroll);
     top: 3em;
 }
 .c-text-container:nth-of-type(11n+3) {
-    animation-delay: 6s;
+    animation-delay: calc(2*var(--animation-delay-c-text-scroll));
     top: 6em;
 }
 .c-text-container:nth-of-type(11n+4) {
-    animation-delay: 9s;
+    animation-delay: calc(3*var(--animation-delay-c-text-scroll));
     top: 9em;
 }
 .c-text-container:nth-of-type(11n+5) {
-    animation-delay: 12s;
+    animation-delay: calc(4*var(--animation-delay-c-text-scroll));
     top: 12em;
 }
 .c-text-container:nth-of-type(11n+6) {
-    animation-delay: 15s;
+    animation-delay: calc(5*var(--animation-delay-c-text-scroll));
     top: 15em;
 }
 .c-text-container:nth-of-type(11n+7) {
-    animation-delay: 18s;
+    animation-delay: calc(6*var(--animation-delay-c-text-scroll));
     top: 18em;
 }
 .c-text-container:nth-of-type(11n+8) {
-    animation-delay: 21s;
+    animation-delay: calc(7*var(--animation-delay-c-text-scroll));
     top: 21em;
 }
 .c-text-container:nth-of-type(11n+9) {
-    animation-delay: 24s;
+    animation-delay: calc(8*var(--animation-delay-c-text-scroll));
     top: 24em;
 }
 .c-text-container:nth-of-type(11n+10) {
-    animation-delay: 27s;
+    animation-delay: calc(9*var(--animation-delay-c-text-scroll));
     top: 27em;
 }
 .c-text-container:nth-of-type(11n+11) {
-    animation-delay: 30s;
-    top: 30em;
+    animation-delay: calc(11*var(--animation-delay-c-text-scroll));
+    top: 33em;
 }
 
 @keyframes text-movement {
     0% {transform:translateX(0)}
-    100%{transform:translateX(-98vw)}
+    100%{transform:translateX(60vw)}
 }
 
 .c-text {
@@ -102,6 +104,7 @@ body {
 
 .c-highlight {
     color: var(--color-highlight);
+    text-shadow: 1px 1px 3px var(--color-secondary);
 }
 
 .yellow {
@@ -152,7 +155,7 @@ body {
     z-index: 1;
     animation-name: merry-christmas;
     animation-duration: 2s;
-    animation-delay: 35s;
+    animation-delay: calc(13*var(--animation-delay-c-text-scroll));
     animation-fill-mode: forwards;
 }
 
@@ -160,7 +163,7 @@ body {
     position: absolute;
     top: -30vh;
     left: 75vw;
-    background-image: url("img/KOCO_Group_Logo_neu_grau_17052023-01.png");
+    background-image: url("img/Logo_KOMO_2023_rgb_margin.png");
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -169,7 +172,7 @@ body {
     z-index: 1;
     animation-name: koco-logo;
     animation-duration: 2s;
-    animation-delay: 34s;
+    animation-delay: calc(12*var(--animation-delay-c-text-scroll));
     animation-fill-mode: forwards;
 }
 
