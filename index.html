@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="christmas.css">
+    <title>KOCO MOTION Christmas Greetings</title>
+</head>
+<body>
+    <div class="container">
+        <div class="elch"></div>
+        <div class="merrychristmas"></div>
+        <div class="koco-logo"></div>
+    </div>
+    <div class="c-text-container">
+      <div class="c-text">An Weihnachten <div class="c-highlight">dreht</div> sich alles um die Familie</div>
+    </div>
+    <div class="c-text-container">
+      <div class="c-text">Es ist die <div class="c-highlight">Phase</div> eine ruhige Kugel zu <div class="c-highlight">schieben</div></div>
+    </div>
+    <div class="c-text-container">
+      <div class="c-text">Weihnachten lässt die Stimmen und die Sinne <div class="c-highlight">vibrieren</div></div>
+    </div>
+    <div class="c-text-container">
+      <div class="c-text">Die Arbeit mit Menschen <div class="c-highlight">treibt</div> uns <div class="c-highlight">an</div></div>
+    </div>
+    <div class="c-text-container">
+      <div class="c-text">Es ist die Zeit zu <div class="c-highlight">entschleunigen</div></div>
+    </div>
+    <div class="c-text-container">
+      <div class="c-text">Es ist die Gelegenheit sich neu zu <div class="c-highlight">positionieren</div></div>
+    </div>
+    <div class="c-text-container">
+      <div class="c-text">Es ist die Chance die Herzen zu <div class="c-highlight">öffnen</div></div>
+    </div>
+    <div class="c-text-container">
+      <div class="c-text">Weihnachten lässt uns alte Freundschaften neu <div class="c-highlight">schließen</div></div>
+    </div>
+    <div class="c-text-container">
+      <div class="c-text">Ein Fest <div class="c-highlight">bewegt</div> uns</div>
+    </div>
+    <div class="c-text-container">
+      <div class="KOCO-is-MOTION">KOCO is MOTION</div>
+    </div>
+    <div class="snowflakes" id="snowflakes">
+</body>
+</html>
+
+<script>
+  window.onload = function (event) {
+    const sContainer = document.getElementById("snowflakes");
+    let htmlStr = "";
+    let pos;
+    for (let i=0; i<12; i++) {
+      pos = Math.floor(Math.random()*110)-15
+      htmlStr+='<div class="snowflake" style="left: '+ pos+'%"><div class="inner yellow">+</div></div>';
+    }
+    for (let i=0; i<12; i++) {
+      pos = Math.floor(Math.random()*110)-15
+      htmlStr+='<div class="snowflake"  style="left: '+ pos+'%"><div class="inner gray">+</div></div>';
+    }
+    for (let i=0; i<12; i++) {
+      pos = Math.floor(Math.random()*110)-15
+      htmlStr+='<div class="snowflake"  style="left: '+ pos+'%"><div class="inner dark"></div></div>';
+    }
+    for (let i=0; i<12; i++) {
+      pos = Math.floor(Math.random()*110)-15
+      htmlStr+='<div class="snowflake"  style="left: '+ pos+'%"><div class="inner light"></div></div>';
+    }
+    sContainer.innerHTML = htmlStr;
+  };
+</script>

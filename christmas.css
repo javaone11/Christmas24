@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&family=Saira:wght@200;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --color-primary:#000000;
+    --color-secondary:#363932;
+    --color-highlight:#ffdd00;
+    --color-light:#ebebeb;
+    --color-dark:#6e6d71;
+    --color-white:#FFFFFF;
+    --color-bluegray:#97adc2;
+    --color-greenblue:#5ca19f;
+    --color-beige:#faeacc;
+    --color-danger: #ee2020;
+    --transparent-white: rgba(255, 255, 255, 0.9);
+    --padding-general: 15px;
+    --padding-table: 5px;
+}
+
+body {
+    background-color: var(--color-white);
+}
+
+.c-text-container {
+    position: absolute;
+    top: 0vh;
+    left: 100vw;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    animation-name: text-movement;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.c-text-container:nth-of-type(11n+1) {
+    animation-delay: 0s;
+}
+.c-text-container:nth-of-type(11n+2) {
+    animation-delay: 3s;
+    top: 3em;
+}
+.c-text-container:nth-of-type(11n+3) {
+    animation-delay: 6s;
+    top: 6em;
+}
+.c-text-container:nth-of-type(11n+4) {
+    animation-delay: 9s;
+    top: 9em;
+}
+.c-text-container:nth-of-type(11n+5) {
+    animation-delay: 12s;
+    top: 12em;
+}
+.c-text-container:nth-of-type(11n+6) {
+    animation-delay: 15s;
+    top: 15em;
+}
+.c-text-container:nth-of-type(11n+7) {
+    animation-delay: 18s;
+    top: 18em;
+}
+.c-text-container:nth-of-type(11n+8) {
+    animation-delay: 21s;
+    top: 21em;
+}
+.c-text-container:nth-of-type(11n+9) {
+    animation-delay: 24s;
+    top: 24em;
+}
+.c-text-container:nth-of-type(11n+10) {
+    animation-delay: 27s;
+    top: 27em;
+}
+.c-text-container:nth-of-type(11n+11) {
+    animation-delay: 30s;
+    top: 30em;
+}
+
+@keyframes text-movement {
+    0% {transform:translateX(0)}
+    100%{transform:translateX(-98vw)}
+}
+
+.c-text {
+    display: flex;
+    gap: .2em;
+    font-family: Saira;
+    font-size: 1.5em;
+    color: var(--color-secondary);
+}
+
+.KOCO-is-MOTION {
+    font-family: Saira;
+    font-size: 3em;
+}
+
+.c-highlight {
+    color: var(--color-highlight);
+}
+
+.yellow {
+    color: var(--color-highlight);
+}
+
+.gray {
+    color: var(--color-bluegray);
+} 
+
+.dark {
+    color: var(--color-dark);
+} 
+
+.light {
+    color: var(--color-light);
+} 
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container .elch {
+    position: absolute;
+    bottom: 10vh;
+    background-color: none;
+    background-image: url("img/KOMO_Adventskalender-2-Elch.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.container .merrychristmas {
+    position: absolute;
+    top: 40vh;
+    left: -88vw;
+    background-image: url("img/KOMO_Adventskalender-3-MerryChristmas.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation-name: merry-christmas;
+    animation-duration: 2s;
+    animation-delay: 35s;
+    animation-fill-mode: forwards;
+}
+
+.container .koco-logo {
+    position: absolute;
+    top: -30vh;
+    left: 75vw;
+    background-image: url("img/KOCO_Group_Logo_neu_grau_17052023-01.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 22%;
+    height: 22%;
+    z-index: 1;
+    animation-name: koco-logo;
+    animation-duration: 2s;
+    animation-delay: 34s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes merry-christmas {
+    0% {transform: translateX(0vw);}
+    100% {transform: translateX(100vw);}
+}
+
+@keyframes koco-logo {
+    0% {transform: translateY(0vh);}
+    100% {transform: translateY(30vh);}
+}
+
+.snowflake {
+  /* color: var(--color-highlight); */
+  font-size: 3em;
+  font-family: Arial, sans-serif;
+}
+
+.snowflake,.snowflake .inner {
+    animation-iteration-count:infinite;
+    animation-play-state:running
+}
+@keyframes snowflakes-fall {
+    0% {transform:translateY(0)}
+    100%{transform:translateY(110vh)}
+}
+@keyframes 
+snowflakes-shake {
+    0%,100%{transform:translateX(0)}
+    50%{transform:translateX(30px)}
+}
+.snowflakes .snowflake {
+    position:fixed;
+    top:-10%;
+    z-index:9999;
+    -webkit-user-select:none;
+    user-select:none;
+    cursor:default;
+    animation-name:snowflakes-shake;
+    animation-duration:3s;
+    animation-timing-function:ease-in-out;
+}
+
+.snowflakes .snowflake .inner {
+    animation-duration:10s;
+    animation-name:snowflakes-fall;
+    animation-timing-function:linear
+}
+
+.light {
+    background-color: var(--color-light);
+    border-radius: 100%;
+    width: .5em;
+    height: .5em;
+}
+
+.dark {
+    background-color: var(--color-dark);
+    border-radius: 100%;
+    width: .5em;
+    height: .5em;
+}
+
+.snowflakes .snowflake:nth-of-type(5n){
+    animation-delay:.5s;
+}
+.snowflakes .snowflake:nth-of-type(5n+1){
+    animation-delay:1s;
+}
+.snowflakes .snowflake:nth-of-type(5n+2){
+    animation-delay:1.2s;
+    animation-duration:5s;
+}
+.snowflakes .snowflake:nth-of-type(5n+3){
+    animation-delay:1.5s;
+    animation-duration:4s;
+}
+.snowflakes .snowflake:nth-of-type(5n+4){
+    animation-delay:1.7s;
+    animation-duration:2s;
+}
+
+.snowflakes .snowflake:nth-of-type(5n) .inner {
+    animation-delay:0s;
+}
+
+.snowflakes .snowflake:nth-last-of-type(5n+1) .inner {
+    animation-delay:2s;
+}
+
+.snowflakes .snowflake:nth-last-of-type(5n+2) .inner {
+    animation-delay:4s;
+}
+
+.snowflakes .snowflake:nth-last-of-type(5n+3) .inner {
+    animation-delay:6s;
+}
+
+.snowflakes .snowflake:nth-last-of-type(5n+4) .inner {
+    animation-delay:8s;
+}
+
+.snowflakes .snowflake:nth-of-type(3n) .inner {
+    animation-delay:1s;
+}
+
+.snowflakes .snowflake:nth-last-of-type(3n+1) .inner {
+    animation-delay:3s;
+}
+
+.snowflakes .snowflake:nth-last-of-type(3n+2) .inner {
+    animation-delay:7s;
+}
+
