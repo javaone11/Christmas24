@@ -7,12 +7,12 @@
 
 :root {
     --color-primary:#000000;
-    --color-secondary:#363932;
-    --color-highlight:#ffdd00;
-    --color-light:#ebebeb;
-    --color-dark:#6e6d71;
+    --color-secondary:#0f659e;
+    --color-highlight:#ff0000;
+    --color-light:#726969;
+    --color-dark:white;
     --color-white:#FFFFFF;
-    --color-bluegray:#97adc2;
+    --color-bluegray:#2e8ee9;
     --color-greenblue:#5ca19f;
     --color-beige:#faeacc;
     --color-danger: #ee2020;
@@ -24,11 +24,15 @@
 }
 
 body {
-    background-color: var(--color-light);
+    background-color:hsl(209, 72%, 86%);
+    ;
 }
 
 .c-text-container {
     position: absolute;
+    text-decoration: none; /* Remove underlines */
+    border: none;          /* Remove borders */
+    outline: none;  
     top: 0;
     left: -57vw;
     width: 100vw;
@@ -92,20 +96,17 @@ body {
 .c-text {
     display: flex;
     gap: .2em;
-    font-family: Saira;
-    font-size: 1.5em;
-    color: var(--color-secondary);
+    font-family: "Playwrite", serif;
+    font-weight: 400;
+    font-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-size: 2em;
+    color: black;
+    text-shadow: 0 0 0;
 }
 
-.KOCO-is-MOTION {
-    font-family: Saira;
-    font-size: 3em;
-}
-
-.c-highlight {
-    color: var(--color-highlight);
-    text-shadow: 1px 1px 3px var(--color-secondary);
-}
 
 .yellow {
     color: var(--color-highlight);
@@ -131,27 +132,29 @@ body {
 
 .container .elch {
     position: absolute;
-    bottom: 10vh;
+    left:78vh;
+    top: 24vh;
     background-color: none;
-    background-image: url("img/KOMO_Adventskalender-2-Elch.png");
+    background-image: url("img/reindeer-removebg-preview.png");
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 80%;
+    transform: rotateZ(-35deg);
     z-index: 0;
 }
 
 .container .merrychristmas {
     position: absolute;
-    top: 40vh;
+    top: 15vh;
     left: -88vw;
     background-image: url("img/KOMO_Adventskalender-3-MerryChristmas.png");
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 150%;
     z-index: 1;
     animation-name: merry-christmas;
     animation-duration: 2s;
@@ -159,27 +162,11 @@ body {
     animation-fill-mode: forwards;
 }
 
-.container .koco-logo {
-    position: absolute;
-    top: -30vh;
-    left: 75vw;
-    background-image: url("img/Logo_KOMO_2023_rgb_margin.png");
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 22%;
-    height: 22%;
-    z-index: 1;
-    animation-name: koco-logo;
-    animation-duration: 2s;
-    animation-delay: calc(12*var(--animation-delay-c-text-scroll));
-    animation-fill-mode: forwards;
-}
 
 
 @keyframes merry-christmas {
     0% {transform: translateX(0vw);}
-    100% {transform: translateX(100vw);}
+    100% {transform: translateX(90vw);}
 }
 
 @keyframes koco-logo {
@@ -188,8 +175,8 @@ body {
 }
 
 .snowflake {
-  /* color: var(--color-highlight); */
-  font-size: 3em;
+  font-size: 2em;
+  color: white;
   font-family: Arial, sans-serif;
 }
 
