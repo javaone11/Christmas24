@@ -30,11 +30,11 @@ body {
 
 .c-text-container {
     position: absolute;
-    text-decoration: none; /* Remove underlines */
-    border: none;          /* Remove borders */
+    text-decoration: none; 
+    border: none;          
     outline: none;  
     top: 0;
-    left: -57vw;
+    left: -77vw;
     width: 100vw;
     height: 100vh;
     z-index: 10;
